@@ -156,7 +156,7 @@ namespace ifrs::parser {
                     result.tags().at(tag_count) = std::stoi(input.substr(last_split, next_split - last_split));
                     if (tag_count >= result.num_of_tags()) state = ElementState::NODES;
 
-                    std::printf("tag %lu: %i  ", tag_count, result.tags().back());
+                    std::printf("tag %lu: %i  ", tag_count + 1, result.tags().back());
                     tag_count++;
                     break;
                 }
